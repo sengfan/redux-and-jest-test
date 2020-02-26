@@ -1,9 +1,13 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
-
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import { shallow } from 'enzyme';
+import CommentBox from './CommentBox';
+let wrapped;
+beforeEach(() => {
+    wrapped = shallow(<App />);
 });
+it('shows comment box', () => {
+    expect(wrapped.find(CommentBox).length).toEqual(1);
+});
+
+
