@@ -42,7 +42,7 @@ const mapDispatchToProps = dispatch => {
         // explicitly forwarding arguments
         saveComment: comment => {
             // do all your logic here
-            comment = comment + 123123123123;
+            //comment = comment + 123123123123;
             dispatch(actions.saveComment(comment));
         }
     };
