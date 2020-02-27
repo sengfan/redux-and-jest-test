@@ -3,5 +3,5 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 
 export default props => {
-    return <Provider store={window.store || store}>{props.children}</Provider>;
+    return <Provider store={store}>{props.children}</Provider>;
 };
